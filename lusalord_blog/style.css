@@ -1,0 +1,141 @@
+/* 기본 설정 */
+body {
+    font-family: 'Pretendard', sans-serif; /* 폰트는 취향껏 변경 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 네비게이션 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { text-decoration: none; color: #333; font-weight: bold; }
+
+/* 히어로 섹션 */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: #f4f4f4;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    /* ⭐ 핵심 수정: 열(column)의 개수를 3개로 고정하고, 
+       각 열의 너비를 균등하게(1fr) 나눕니다. 
+       (만약 4개 카드가 적당하다면 repeat(4, 1fr)로 바꾸세요.) */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    gap: 20px;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* 블로그 스타일 */
+.blog-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.post-item {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+.post-item a { text-decoration: none; color: #222; }
+.post-item a:hover { color: #007bff; }
+.date { color: #888; font-size: 0.9rem; }
+
+/* 다크 모드 스타일 */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card, 
+body.dark-mode nav {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+body.dark-mode nav a,
+body.dark-mode .post-item a {
+    color: #90caf9; /* 링크 색상을 밝게 */
+}
+
+body.dark-mode .hero {
+    background-color: #1e1e1e;
+}
+
+.clickable-card {
+    transition: transform 0.2s, box-shadow 0.2s; /* 부드러운 애니메이션 효과 */
+    cursor: pointer; /* 마우스 오버 시 손가락 모양 커서로 변경 */
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px); /* 살짝 위로 띄우는 효과 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 그림자 진하게 */
+}
+
+.post-content {
+    /* 내용 영역의 최대 너비를 지정합니다. (일반적으로 700px~800px이 읽기 가장 편안합니다) */
+    max-width: 800px;
+    
+    /* 좌우 여백을 자동으로 설정하여 내용을 중앙에 정렬합니다. */
+    margin: 40px auto; 
+    
+    /* 좌우에 기본적인 패딩(안쪽 여백)을 추가하여, 
+       화면이 작아졌을 때(모바일) 내용이 화면 가장자리에 붙는 것을 방지합니다. */
+    padding: 0 20px; 
+}
+
+/* 추가: 상세 페이지 안의 이미지나 코드가 영역을 벗어나지 않도록 설정 */
+.post-content img,
+.post-content pre {
+    max-width: 100%;
+    height: auto;
+    display: block; /* 이미지 아래 불필요한 공백 제거 */
+    margin: 20px 0;
+}
+
+/* 추가: 본문 텍스트의 줄 간격(행간)을 넓혀 가독성을 높입니다. */
+.post-content p {
+    line-height: 1.8;
+}
+
+/* 추가: 코드 블록 스타일 (선택 사항) */
+.post-content pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* 코드가 길 때 스크롤바 생성 */
+}
+
+/* 다크 모드일 때 코드 블록 색상 변경 */
+body.dark-mode .post-content pre {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
