@@ -5,7 +5,7 @@ export const projects = [
         desc: "HTML, CSS, JS로 만든 개인 포트폴리오 및 블로그 웹사이트입니다.",
         tags: ["HTML", "CSS", "JavaScript"],
         
-        url: "Blog_post/post-1-start-blog.html" 
+        url: "Blog_post/post-2-publish-blog.html" 
     }
 ];
 
@@ -17,5 +17,12 @@ export const blogPosts = [
         summary: "내가 블로그를 만들게 된 이유",
     
         url: "Blog_post/post-1-start-blog.html" 
+    },
+    {
+        title: "개인 블로그 사이트 개발",
+        date: "2025-12-15",
+        summary: "블로그 개발 과정 및 활용한 기능 소개",
+    
+        url: "Blog_post/post-2-publish-blog.html" 
     },
 ];
