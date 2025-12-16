@@ -12,17 +12,17 @@ export const projects = [
 // 블로그 글 목록 데이터
 export const blogPosts = [
     {
-        title: "개발 블로그를 시작하며",
-        date: "2025-12-15",
-        summary: "내가 블로그를 만들게 된 이유",
-    
-        url: "Blog_post/post-1-start-blog.html" 
-    },
-    {
         title: "개인 블로그 사이트 개발",
         date: "2025-12-15",
         summary: "블로그 개발 과정 및 활용한 기능 소개",
     
         url: "Blog_post/post-2-publish-blog.html" 
     },
+    {
+        title: "개발 블로그를 시작하며",
+        date: "2025-12-15",
+        summary: "내가 블로그를 만들게 된 이유",
+    
+        url: "Blog_post/post-1-start-blog.html" 
+    }
 ];
