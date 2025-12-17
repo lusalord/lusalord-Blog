@@ -6,11 +6,25 @@ export const projects = [
         tags: ["HTML", "CSS", "JavaScript"],
         
         url: "Blog_post/post-2-publish-blog.html" 
+    },
+    {
+        title: "1학년 1학기 개인 프로젝트",
+        desc: "HTML, CSS, JS로 만든 개인 포트폴리오 및 블로그 웹사이트입니다.",
+        tags: ["Unity", "C#"],
+        
+        url: "Blog_post/post-3-Personal-Project.html" 
     }
 ];
 
 // 블로그 글 목록 데이터
 export const blogPosts = [
+    {
+        title: "1학년 1학기 개인 프로젝트 개발",
+        date: "2025-12-15",
+        summary: "개인 프로젝트 소개와 개발한 기능 설명",
+    
+        url: "Blog_post/post-3-Personal-Project.html" 
+    },
     {
         title: "개인 블로그 사이트 개발",
         date: "2025-12-15",
