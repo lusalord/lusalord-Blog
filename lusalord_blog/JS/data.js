@@ -28,7 +28,7 @@ export const blogPosts = [
     {
         title: "알고리즘 설명과 백준 문제 풀이 : 백준 5585 거스름돈 C++ 문제 해설",
         date: "2025-12-30",
-        summary: "게임잼 게임 소개와 맡은 역할 설명",
+        summary: "알고리즘에 대한 설명과 그리디 알고리즘을 사용한 백준 문제 풀이",
     
         url: "Blog_post/post-5-Baekjoon-algorithm.html",
         category: '개발'
