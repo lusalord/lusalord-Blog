@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그</title>
+    <link rel="stylesheet" href="../style.css">
+    </head>
+<body>
+    <nav>
+        <div class="logo">lusalord</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <article class="post-content">
+        <h1>알고리즘 설명과 백준 문제 풀이 : 백준 5585 거스름돈 C++ 문제 해설</h1>
+        <p class="post-meta">작성일: 2025-12-30 | 카테고리: 개발</p>
+        <hr>
+
+        <section>
+            <h2>1. 알고리즘 설명</h2>
+            <p>
+                알고리즘은 문제를 해결하기 위한 단계별 절차입니다.
+                <br>이번에는 몇가지의 기본적인 알고리즘의 종류를 알아보고 그리디 알고리즘을 사용한 백준 문제 풀이를 해보겠습니다.
+            </p>
+
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>2. 브루트 포스</h2>
+            <p>
+                브루트 포스는 조합 가능한 모든 경우의 수를 탐색하는 알고리즘입니다.
+                <br>간단하게 모든 값을 다 시도해보는 노가다입니다.
+                <br>
+                <br>브루트 포스의 장점은 구현하기가 굉장히 쉽다는 점입니다.
+
+                <br>예시로 브루트 포스 문제 중 하나인 블랙잭을 본다면
+                <img src="../Image/스크린샷 2025-12-30 103814.png" alt="">
+                <br>이렇게 for문만을 사용해서 간단하게 구현 했다는 것을 알 수 있습니다.
+                <br>
+                <br>그러나 브루트 포스의 단점은 연산량이 많아질 수록 시간 복잡도가 기하급수적으로 늘어나 비효율적이라는 점입니다.
+                <br>그래서 문제의 크기가 클 때에는 다른 알고리즘을 사용합니다.
+            </p>
+        </section>
+        <section>
+            <h2>3. 그리디 알고리즘</h2>
+            <p>
+                그리디 알고리즘은 매 선택마다 현재 상황에서 가장 최선의 답을 선택하여 결과를 도출하는 알고리즘입니다.
+                <br>즉, 현재 상황에서 가장 좋아 보이는 것을 선택하는 방법입니다.
+                <br>
+                <br>그리디 알고리즘의 장점은 낮은 시간 복잡도를 가지며, 구현이 비교적 간단하다는 점입니다.
+                <br>
+                <br>그러나 그리디 알고리즘은 현재 상황에서 최선의 답을 선택하는 알고리즘이라 전체적인 상황에서는 최적의 해답을 보장하지 않을 수 있다는 단점이 있습니다.
+            </p>
+        </section>
+        <section>
+            <h2>4. 다이나믹 프로그래밍</h2>
+            <p>
+                그리디 알고리즘의 단점을 보완할 알고리즘은 많이 있지만, 그 중 하나인 다이나믹 프로그래밍에 대해서 알아보겠습니다.
+                <br>다이나믹 프로그래밍은 복잡한 문제를 작은 부분 문제로 나누어 해결하는 알고리즘입니다.
+                <br>이 작은 부분 문제들의 해답을 저장해두고, 이를 이용해 전체 문제의 해답을 도출합니다.
+                <br>
+                <br>다이나믹 프로그래밍의 장점은 중복 계산을 피할 수 있어 시간 복잡도를 크게 줄일 수 있다는 점입니다.
+                <br>또한, 최적의 해답을 보장한다는 점입니다.
+                <br> 
+                <br>그러나 단점으로는 구현이 복잡하며, 추가적인 메모리가 필요하기에 공간 복잡도가 높다는 점입니다.
+            </p>
+        </section>
+        <section>
+            <h2>5. 백준 5585 거스름돈 문제</h2>
+            <p>
+                백준 5585 거스름돈 문제는 그리디 알고리즘을 활용하여 해결할 수 있는 대표적인 문제입니다.
+                <br>이 문제는 거스름돈을 최소한의 동전 개수로 주는 문제입니다.
+                <br>
+                <br>이 문제를 해결하기 위해, 우리는 가장 큰 동전부터 사용하여 거스름돈을 주면 됩니다.
+                <br>예를 들어, 1000원을 받고 380원을 주어야 한다면, 1000 - 380 = 620원이 거스름돈입니다.
+                <br>그리디 알고리즘에 따라 가장 큰 동전부터 사용하면, 500원, 100원, 50원, 10원, 5원, 1원 순으로 사용하면 됩니다.
+
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+                <pre><code class="language-javascript">
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    cin >> a;
+
+    int change = 1000 - a;
+    int cnt = 0;
+    int coin[6] = {500, 100, 50, 10, 5, 1};
+
+    for(int i = 0; i < 6; i++){
+        while(true){
+            if(change - coin[i] >= 0){
+                cnt++;
+                change = change - coin[i];
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+    cout << cnt;
+}
+                </code></pre>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+            </p>
+        </section>
+    </article>
+    
+    <script type="module" src="../JS/script.js"></script> 
+</body>
+</html>
