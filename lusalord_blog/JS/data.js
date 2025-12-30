@@ -26,6 +26,14 @@ export const projects = [
 // 블로그 글 목록 데이터
 export const blogPosts = [
     {
+        title: "알고리즘 설명과 백준 문제 풀이 : 백준 5585 거스름돈 C++ 문제 해설",
+        date: "2025-12-30",
+        summary: "게임잼 게임 소개와 맡은 역할 설명",
+    
+        url: "Blog_post/post-5-Baekjoon-algorithm.html",
+        category: '개발'
+    },
+    {
         title: "2025년 비공식 게임잼 팀 프로젝트 개발",
         date: "2025-12-17",
         summary: "게임잼 게임 소개와 맡은 역할 설명",
