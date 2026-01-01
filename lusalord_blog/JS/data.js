@@ -20,11 +20,26 @@ export const projects = [
         tags: ["Unity", "C#"],
         
         url: "Blog_post/post-4-Team-Project-FlipFlop.html" 
+    },
+    {
+        title: "Charge Shot",
+        desc: "물리 학습용 팀 프로젝트.",
+        tags: ["Unity", "C#"],
+        
+        url: "Blog_post/post-6-PhysicsProject.html" 
     }
 ];
 
 // 블로그 글 목록 데이터
 export const blogPosts = [
+    {
+        title: "물리 학습용 게임 개발 팀 프로젝트 Charge Shot",
+        date: "2026-01-02",
+        summary: "물리 학습용 게임 개발 팀 프로젝트 Charge Shot 소개",
+    
+        url: "Blog_post/post-6-PhysicsProject.html",
+        category: '프로젝트'
+    },
     {
         title: "알고리즘 설명과 백준 문제 풀이 : 백준 5585 거스름돈 C++ 문제 해설",
         date: "2025-12-30",
