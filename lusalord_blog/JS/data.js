@@ -33,6 +33,14 @@ export const projects = [
 // 블로그 글 목록 데이터
 export const blogPosts = [
     {
+        title: "백준 13305번 - 주유소 C++ 문제 해설",
+        date: "2026-01-14",
+        summary: "백준 13305번 주유소 문제에 대한 설명과 C++ 풀이 코드 제공",
+
+        url: "Blog_post/post-7-GasStation.html",
+        category: '개발'
+    },
+    {
         title: "물리 학습용 게임 개발 팀 프로젝트 Charge Shot",
         date: "2026-01-02",
         summary: "물리 학습용 게임 개발 팀 프로젝트 Charge Shot 소개",
